@@ -1,0 +1,202 @@
+#wrapper {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(
+            0px,
+            1fr
+        );
+    grid-template-rows: auto;
+}
+
+header {
+    background-color: rgba(49, 49, 49, 0.877);
+    grid-column: 2 / -2;
+    /*    text-align: center; */
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    text-align: center;
+    padding: 0%;
+    margin: 3%;
+}
+
+header ul li {
+    width: 100%;
+}
+
+header a {
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+#image-placeholder {
+    grid-column: 2 / 4;
+    align-content: end;
+    /*
+    background-color: rgba(49, 49, 49, 0.877);
+    text-align: center;
+    color: antiquewhite;
+*/
+}
+
+#toast-text {
+    grid-column: 5 / -2;
+    /*    text-align: center;*/
+    border-bottom-style: outset;
+    border-color: lightgray;
+    align-content: center;
+    background-color: lightgray;
+}
+
+#toast-text p {
+    font-size: larger;
+    line-height: 160%;
+}
+
+main {
+    /*    background-color: rgba(63, 63, 63, 0.644); */
+    grid-column: 2 / -2;
+    border-bottom-style: outset;
+    border-color: lightgray;
+    background-color: lightgray;
+    line-height: 200%;
+}
+
+.project-descriptor {
+    grid-column: 2 / 5;
+    /*    text-align: center;*/
+    border-bottom-style: outset;
+    border-color: lightgray;
+    align-content: center;
+    background-color: lightgray;
+    line-height: 200%;
+}
+
+.project-image {
+    grid-column: 6 / -2;
+    align-content: center;
+}
+
+footer {
+    border-style: inset;
+    grid-column: 2 /-2;
+    /*    text-align: center;*/
+    font-size: 70%;
+    text-align: center;
+    background-color: lightgray;
+}
+
+p {
+    padding: 2%;
+}
+
+.spacer {
+    grid-column: 2 / -2;
+    margin: 4%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#me {
+    rotate: 270deg;
+}
+
+#portfolio-header {
+    font-size: large;
+    text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+    #wrapper {
+        display: grid;
+        grid-auto-rows: minmax();
+        grid-template-columns:
+            minmax(0px, 1fr) repeat(6, minmax(0, 120px))
+            minmax(0px, 1fr);
+    }
+
+    footer {
+        font-size: small;
+    }
+
+    #image-placeholder {
+        grid-column: 2 / 5;
+    }
+
+    #toast-text {
+        grid-column: 6 / -2;
+        font-size: medium;
+    }
+
+    #toast-text p {
+        line-height: 114%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #wrapper {
+        grid-template-columns:
+            repeat(2, minmax(0, 56px)) repeat(1, minmax(0, 768px))
+            repeat(2, minmax(0, 56px));
+    }
+
+    #image-placeholder {
+        background-color: rgba(49, 49, 49, 0.877);
+        grid-column: 1 / -1;
+        text-align: center;
+        color: antiquewhite;
+    }
+
+    #toast-text {
+        grid-column: 1 / -1;
+        /*    text-align: center;*/
+        border-bottom-style: outset;
+        border-color: lightgray;
+        width: 100%;
+        font-size: large;
+        text-align: center;
+    }
+
+    #toast-text p {
+        font-size: larger;
+    }
+
+    header {
+        background-color: rgba(49, 49, 49, 0.877);
+        grid-column: 1 / -1;
+        /*    text-align: center; */
+    }
+
+    main {
+        /*    background-color: rgba(63, 63, 63, 0.644); */
+        grid-column: 1 /-1;
+        border-style: outset;
+        border-color: lightgray;
+        background-color: lightgray;
+    }
+
+    footer {
+        grid-column: 1/ -1;
+        font-size: small;
+    }
+
+    .project-descriptor {
+        grid-column: 1 / -1;
+        /*    text-align: center;*/
+        border-bottom-style: outset;
+        border-color: lightgray;
+        align-content: center;
+        background-color: lightgray;
+        line-height: 200%;
+    }
+
+    .project-image {
+        grid-column: 1 / -1;
+        align-content: end;
+    }
+}
